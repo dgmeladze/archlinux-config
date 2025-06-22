@@ -31,3 +31,12 @@ Run the script directly from GitHub:
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/dgmeladze/archlinux-config/main/arch-setup.sh)"
+```````
+
+or via git clone 
+
+```bash
+git clone https://github.com/dgmeladze/archlinux-config.git
+cd archlinux-config
+sh arch-setup.sh
+```````
