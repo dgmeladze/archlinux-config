@@ -17,7 +17,7 @@ sudo pacman -Syu --noconfirm
 
 echo "==> Установка пакетов из официального репозитория..."
 sudo pacman -S --noconfirm \
-  git wget curl filezilla zsh
+  git wget curl filezilla zsh ntfs-3g firefox
 sudo pacman -S steam
 echo "==> Установка yay..."
 sudo pacman -S --needed --noconfirm base-devel
@@ -37,7 +37,8 @@ yay -S --noconfirm \
   yaru-gnome-shell-theme  \
   yaru-gtk-theme \
   yaru-icon-theme \
-  yaru-sound-theme
+  yaru-sound-theme \
+  ttf-ubuntu-font-family
 
 echo "==> Установка Oh My Zsh..."
 export RUNZSH=no
