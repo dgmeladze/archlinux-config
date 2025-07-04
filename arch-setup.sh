@@ -4,12 +4,13 @@ set -e
 
 echo "==> Проверка и включение multilib при необходимости..."
 
-if ! grep -Pzo '\[multilib\]\nInclude = /etc/pacman.d/mirrorlist' /etc/pacman.conf; then
+if grep -q "^#\[multilib\]" /etc/pacman.conf; then
   echo "==> Включение [multilib] репозитория..."
-  sudo sed -i '/#\[multilib\]/,/^#Include = \/etc\/pacman\.d\/mirrorlist/ s/^#//' /etc/pacman.conf
+  sudo sed -i '/^\#\[multilib\]/,/^\#Include = \/etc\/pacman\.d\/mirrorlist/ s/^#//' /etc/pacman.conf
 else
   echo "==> multilib уже включён"
 fi
+
 
 echo "==> Обновление системы..."
 sudo pacman -Syu --noconfirm
