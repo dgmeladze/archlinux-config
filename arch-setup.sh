@@ -17,8 +17,8 @@ sudo pacman -Syu --noconfirm
 
 echo "==> Установка пакетов из официального репозитория..."
 sudo pacman -S --noconfirm \
-  git wget curl filezilla steam zsh
-
+  git wget curl filezilla zsh
+sudo pacman -S steam
 echo "==> Установка yay..."
 sudo pacman -S --needed --noconfirm base-devel
 if ! command -v yay >/dev/null 2>&1; then
